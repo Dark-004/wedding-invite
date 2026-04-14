@@ -1,0 +1,173 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* BODY BACKGROUND */
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #eee;
+}
+
+/* ================= COVER ================= */
+
+.cover {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: url("background.png") center/cover no-repeat;
+  z-index: 10;
+}
+
+.overlay {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* INITIALS */
+.initials {
+  font-family: 'Great Vibes', cursive;
+  font-size: 80px;
+  color: #e8a9a9;
+}
+
+.initials span {
+  display: inline-block;
+  transition: 1s ease;
+}
+
+.tap {
+  margin-top: 20px;
+  font-size: 14px;
+  letter-spacing: 2px;
+}
+
+/* DOOR ANIMATION */
+.open .left {
+  transform: translateX(-200px);
+  opacity: 0;
+}
+
+.open .right {
+  transform: translateX(200px);
+  opacity: 0;
+}
+
+.open .center {
+  opacity: 0;
+}
+
+/* ================= CARD ================= */
+
+.card {
+  width: 700px;
+  height: 700px;
+
+  background: url("background.png") center/contain no-repeat;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  display: none;
+}
+
+/* TEXT */
+.content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 85%;
+  text-align: center;
+}
+
+.heading {
+  font-family: 'Cinzel', serif;
+  font-size: 12px;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+}
+
+.names {
+  font-family: 'Great Vibes', cursive;
+  font-size: 48px;
+  color: #e8a9a9;
+  margin: 20px 0;
+}
+
+.names span {
+  color: #7a9a7a;
+}
+
+.family {
+  font-size: 13px;
+  margin: 15px 0;
+   line-height: 1.6;
+}
+
+.date {
+  margin: 15px 0;
+  color: #7a9a7a;
+}
+
+.venue {
+  margin-top: 15px;
+  font-weight: bold;
+  font-size: 13px;
+
+  text-decoration: none;
+  color: #2e2e2e;
+  
+}
+
+.venue:hover {
+  color: #e8a9a9;
+}
+.footer {
+  margin-top: 15px;
+  font-style: italic;
+  font-size: 12px;
+}
+
+/* MOBILE */
+@media (max-width: 500px) {
+  .card {
+    width: 90%;
+    height: auto;
+    aspect-ratio: 5/7;
+  }
+
+  .details {
+    flex-direction: column;
+  }
+}
+/* FLOWER PARTICLES */
+#flowers {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.flower {
+  position: absolute;
+  bottom: -50px;
+  font-size: 20px;
+  opacity: 0.7;
+  animation: floatUp linear infinite;
+}
+
+
+
+
