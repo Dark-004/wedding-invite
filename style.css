@@ -68,17 +68,34 @@ body {
 /* ================= CARD ================= */
 
 .card {
-  width: 700px;
+  .card {
+  width: 400px;
   height: 700px;
 
-  background: url("background.png") center/contain no-repeat;
+  background: url("background.png") no-repeat center;
+  background-size: contain;
 
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  position: relative;
+}
+}
+@media (max-width: 600px) {
+  .card {
+    width: 100vw;          /* full width */
+    height: 100vh;         /* full height */
 
-  display: none;
+    background-size: cover;  /* fill screen nicely */
+  }
+   .names {
+    font-size: 42px;
+  }
+
+  .heading {
+    font-size: 11px;
+  }
+
+  .family {
+    font-size: 12px;
+  }
 }
 
 /* TEXT */
