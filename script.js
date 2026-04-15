@@ -9,3 +9,6 @@ cover.addEventListener("click", () => {
     card.style.display = "block";
   }, 1000);
 });
+function openMap() {
+  window.open("https://maps.google.com?q=Appoos+Auditorium+Perumbavoor", "_blank");
+}
